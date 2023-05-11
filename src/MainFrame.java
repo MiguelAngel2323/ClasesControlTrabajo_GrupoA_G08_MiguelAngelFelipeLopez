@@ -26,6 +26,7 @@ public class MainFrame extends JFrame{
     private JTextField tfBuscarPais;
     private JButton calcularPaisButton;
     private JTextField tfResultadoPais;
+    private JButton Buscar;
 
     public MainFrame(){
         setContentPane(mainPanel);
@@ -88,6 +89,13 @@ public class MainFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 tfResultadoPais.setText(Integer.toString(puerto.contador(tfBuscarPais.getText())));
+            }
+        });
+
+        Buscar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tfResultadoPais.setText(Integer.toString(puerto.buscar_por_base()));
             }
         });
     }

@@ -99,6 +99,33 @@ public class Puerto {
         }
         return s;
     }
+    public int buscar_por_base() {
+        boolean control = false;
+        String s = new String();
+        for (int k = 0; k < hubs.length; k++) {
+            for (int i = 0; i < hubs[k].m.length; i = 1) {
+                for (int j = 0; j < hubs[k].m[i].length; j++) {
+                    if (hubs[k].m[i][j] != null) {
+                        s += hubs[k].m[i][j].toString();
+                        control = true;
+                    }
+
+
+                }
+            }
+
+        }
+        if (!control) {
+            return "No hay contenedores";
+
+
+
+        }
+        return s;
+    }
+
+
+
 
 
 
